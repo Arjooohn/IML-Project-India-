@@ -145,7 +145,7 @@ CREATE TABLE Work_Logs (
   Employee_ID VARCHAR2(10) NOT NULL,
   Assignment_ID VARCHAR2(8) NOT NULL,
   Bill_Number VARCHAR2(10) NOT NULL,
-  Hours_Worked INTEGER NOT NULL,
+  Hours_Worked NUMBER(3) NOT NULL,
   WL_Date DATE NOT NULL,
   CONSTRAINT PK_Work_Logs PRIMARY KEY (WorkLog_ID),
   CONSTRAINT FK_Work_Logs_Employee_ID
@@ -188,3 +188,9 @@ INSERT INTO Skill_Employee (Employee_ID, Skill_ID) VALUES ('E1001', 'S1000');
 
 -- Task Skills
 INSERT INTO Task_Skills (Task_ID, Skill_ID, Project_ID, No_Of_Employees) VALUES ('T1001', 'S1000', 'P1001', '4');
+
+-- Bill 
+INSERT INTO Bill (Bill_Number, Bill_Date, Total_Amount) VALUES ('00001', '06-MAR-2019', '18000');
+
+-- Work Logs 
+INSERT INTO Work_Logs (WorkLog_ID, Employee_ID, Assignment_ID, Bill_Number, Hours_Worked, WL_Date) VALUES ('WL1001', 'E1001', 'PA1001', '00001', '56', '29-MAR-2018');
