@@ -1,11 +1,23 @@
 
---Trigger - every time the user will make an INSERT statement into the Employee table, it will trigger this trigger to output the following message.
 
-CREATE TRIGGER trigger1 AFTER INSERT
+--Trigger - every time the user will make an INSERT statement into the Employee table, it will trigger this trigger to check if the 
+-- format of the Employee_ID is correctly written.
+
+CREATE TRIGGER validate_employee_id 
+BEFORE INSERT 
 ON Employee
-FOR EACH ROW BEFORE 
-    INSERT INTO trigger1 VALUES ("You have added a new employee!")
+BEGIN 
+    WHEN NEW.Employee_ID NOT LIKE 'E____%' THEN
+    RAISE (abort, 'INVALID Employee_ID')
+    END;
 END;
+
+
+
+-- INSERT INTO Employee (Employee_ID, Employee_Fname, Employee_Lname, Employee_Initial, Region_ID, Hire_Date) VALUES ('Z8888', 'Dela Cruz', 'John', 'A', 'R6000', '2020-10-10');
+-- INSERT INTO Employee (Employee_ID, Employee_Fname, Employee_Lname, Employee_Initial, Region_ID, Hire_Date) VALUES ('E1018', 'Dela Cruz', 'John', 'A', 'R6000', '2020-10-10');
+
+--SELECT * FROM Employee;
 
 
 --2 Stored Procedures
