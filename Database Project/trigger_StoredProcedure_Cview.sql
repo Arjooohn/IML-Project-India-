@@ -35,7 +35,7 @@ END;
 --EXEC budgetcost_diff();
  
 --BEGIN
---budgetcost_diff();
+--budgetcost_diff;
 --END;
 
 
@@ -62,7 +62,7 @@ END;
 
 --to call the procedure
 --BEGIN 
---GetNoOfEmployee();
+--GetNoOfEmployee;
 --END;
 
 
