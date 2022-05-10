@@ -1,0 +1,74 @@
+CREATE VIEW 1:
+
+This "Virtual Table" or in this create view statement will view the user the 
+employees working in the company in less than 2 years.
+
+Why do we think that this is necessary? 
+We do think that this is necessary because you need to keep track 
+of who are the new employees that were hired in your company. 
+In this specific create view statement, you are keeping track of all the 
+employees working for only less than 2 years or woking in your company since 2019
+to the present year, 2021.
+
+-------------------------------------
+
+CREATE VIEW 2:
+
+As for the second "Virtual Table", this create view statment will view the 
+Employee_ID, coming from the Work_Logs table, that has the longest hours working 
+in a project, for example.
+
+Now, why do we think that this is necessary?
+By knowing the employee who has the longest time working can help your company keep 
+track of the payroll as well as the time off and vacation of an employee. This can 
+also help your company determine who is the most hard working employee of the month 
+or week for salary bonuses or etc.
+
+-------------------------------------
+
+Trigger1:
+
+This trigger can help your company reassure that you have addded a new employee 
+whenever you are inserting a newly hired employee in the Employee table. Without 
+this trigger in your database, things can get a little bit complicated whenever 
+you are inserting numerous and various employees in your database. 
+
+-------------------------------------
+
+Stored Procedure 1 (budgetcost_diff):
+
+When you are the boss of your own company, you are going to handle a lot of projects 
+that is going simultaneously. Ater a project from a client is done, you need to do a 
+financial report for the alloted budget for that specific project and its actual cost. 
+In this stored procedure, you can output the Project_ID, Project_Description, 
+Approx_Budget, Actual_Cost, and the difference of the budget and the cost. This stored 
+procedure can summarize it all for you. 
+
+--------------------------------------
+
+Stored Procedure 2 (GetNoOfEmployees):
+
+Keeping track of the right amount of employees in a particular project is needed 
+when you are managing or running a company. In this stored procedure, you can easily 
+get the number of employees working in a specific project. The stored procedure will get 
+the employee ID, the name fo the employee, and the project ID. 
+
+-------------------------------------
+
+Create Table Statements:
+Just answer the questions:
+- What is the table for?
+- What are the attributes and its data types?
+- Can it be emmpty? (NOT NULL)
+- what are the primary keys and foreign keys?
+
+-------------------------------------
+
+Insert statements:
+Choose one insert statement and just tell the column names and its corresponding values.
+
+
+
+
+
+
