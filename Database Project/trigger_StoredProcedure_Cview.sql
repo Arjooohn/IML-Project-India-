@@ -23,7 +23,7 @@ END;
 --This Stored Procedure will select all the customer in a particular region
 CREATE OR REPLACE 
 PROCEDURE budgetcost_diff 
-AS 
+IS 
 BEGIN
 SELECT Project_ID, Project_Description, Approx_Budget, Actual_Cost, Approx_Budget-Actual_Cost AS "Budget and Cost Difference" 
 FROM Project
@@ -45,7 +45,7 @@ END;
 --Get all involved employees in a project_ID
 CREATE OR REPLACE 
 PROCEDURE GetNoOfEmployees 
-AS 
+IS 
 BEGIN 
 SELECT Employee.Employee_ID, 
 Employee.Employee_Fname||' '||Employee.Employee_Initial||'. '|| Employee.Employee_Lname AS "Employee_Name", 
@@ -88,3 +88,4 @@ FROM Work_Logs
 SELECT * FROM Employee_LongestTime;
 
 
+--Hindi pa nafifinalize to kasi hindi pa ako ganon kasure kung gagana to 
