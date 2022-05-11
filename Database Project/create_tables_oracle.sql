@@ -158,39 +158,3 @@ CREATE TABLE Work_Logs (
     FOREIGN KEY (Bill_Number)
       REFERENCES Bill(Bill_Number)
 );
-
--- INSERTS
-
--- Region
-INSERT INTO Region (Region_ID, Region_Name) VALUES ('R1000', 'NW');
-
--- Customer
-INSERT INTO Customer (Customer_ID, Region_ID, Customer_Name, Phone_Number) VALUES ('C1001', 'R1000', 'Lloyd Padilla', '0915123416'); 
-
--- Employee
-INSERT INTO Employee (Employee_ID, Employee_Fname, Employee_Lname, Employee_Initial, Region_ID, Hire_Date) VALUES ('E1001', 'Jovan', 'Aldo', 'X', 'R1000', '02-DEC-2018');
-
--- Project
-INSERT INTO Project (Project_ID, Customer_ID, Project_Description, Project_Date, Scheduled_StartDate, Scheduled_EndDate, Approx_Budget, Actual_StartDate, Actual_EndDate, Actual_Cost, Manager_ID)
-  VALUES ('P1001', 'C1001', 'Sales Management System', '25-JAN-2019', '25-FEB-2019', '05-MAR-2019', '20000', '25-FEB-2019', '06-MAR-2019', '37200', 'E1001');
-
--- Project Schedule
-INSERT INTO Project_Schedule (Task_ID, Project_ID, Task_Description, Start_Date, End_Date) VALUES ('T1001', 'P1001', 'Initial Interview', '25-FEB-2018', '01-MAR-2018'); 
-
--- Assignment
-INSERT INTO Assignment (ProjAssignment_ID, Employee_ID, Project_ID, Task_ID, ProjAssignment_StartDate, ProjAssignment_EndDate) VALUES ('PA1001', 'E1001', 'P1001', 'T1001', '25-FEB-2018', '01-MAR-2018');
-
--- Skill
-INSERT INTO Skill (Skill_ID, Skill_Description, Skill_PayRate) VALUES ('S1000', 'Data Entry I', '1000');
-
--- Skill Employee
-INSERT INTO Skill_Employee (Employee_ID, Skill_ID) VALUES ('E1001', 'S1000');
-
--- Task Skills
-INSERT INTO Task_Skills (Task_ID, Skill_ID, Project_ID, No_Of_Employees) VALUES ('T1001', 'S1000', 'P1001', '4');
-
--- Bill 
-INSERT INTO Bill (Bill_Number, Bill_Date, Total_Amount) VALUES ('00001', '06-MAR-2019', '18000');
-
--- Work Logs 
-INSERT INTO Work_Logs (WorkLog_ID, Employee_ID, Assignment_ID, Bill_Number, Hours_Worked, WL_Date) VALUES ('WL1001', 'E1001', 'PA1001', '00001', '56', '29-MAR-2018');
